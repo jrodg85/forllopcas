@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+                                     http://xmlns.jcp.org/xml/ns/persistence/orm_2_2.xsd"
+                 version="2.2">
+			     
+    <entity class="com.bullseye.entidades.FuegoConId" access="FIELD">
+    <entity-listeners>
+      <entity-listener class="com.bullseye.repositorios.FuegoConIdDAOListener">
+        <pre-persist method-name="preGuardarFuego" />
+            </entity-listener>
+        </entity-listeners>
+        <attributes>
+            <basic name="calibreEnMilimetros" optional="false" >
+				<column name="CALIBRE_EN_MILIMETROS" length="32 "/>
+            </basic>
+             <basic name="sistemaAccion" optional="false" >
+				<column name="SISTEMA_ACCION" length="64"/>
+            </basic>
+            
+        </attributes>
+    </entity>
+</entity-mappings>

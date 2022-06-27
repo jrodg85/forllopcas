@@ -1,0 +1,3 @@
+rootProject.name = 'Bullseye'
+
+includeFlat 'Bullseye-Common'
